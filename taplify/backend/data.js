@@ -6,7 +6,7 @@ const DataSchema = new Schema(
   {
     name: String,
     style: String,
-    dscription: String,
+    description: String,
     ibu: Number,
     abv: Number,
     srm: Number

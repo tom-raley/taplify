@@ -11,7 +11,6 @@ function App() {
     })
     const getBeers = async () => {
       let res = await beerService.getData();
-      console.log(res);
       setbeers(res);
     }
 
@@ -19,11 +18,10 @@ function App() {
       return (
         <li key={beer._id} className="list__item product">
           <h3 className="product__name">{beer.name}</h3>
-          <p className="product__description">{beer.description}</p>
+          <p className="product__description">{beer.style}</p>
         </li> 
       );
     };
-
     return (
        <div className="App">
           <ul className="list">

@@ -14,25 +14,21 @@ function Beer() {
     let res = await beerService.getData();
     setbeers(res);
   }
-  const renderBeer = beer => {
+
+  if(beers && beers.length > 0) {
+    return(
+     beers.map((beer, ind) => (
+      <div key={ind}>
+        <h1>{beer.name}</h1>
+        <h2>{beer.style}</h2>
+        <p>{beer.description}</p>
+      </div>
+    )))
+  } else {
     return (
-      <li key={beer._id} className="list__item product">
-        <h3 className="product__name">{beer.name}</h3>
-        <p className="product__description">{beer.style}</p>
-      </li>
-    );
+      <p>No beers on right now!</p>
+    )
   };
-  return (
-    <div className="App">
-      <ul className="list">
-        {(beers && beers.length > 0) ? (
-          beers.map(beer => renderBeer(beer))
-        ) : (
-            <p>No products found</p>
-          )}
-      </ul>
-    </div>
-  );
 }
 
-export default Beer;
+export default Beer

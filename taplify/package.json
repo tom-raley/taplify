@@ -37,11 +37,5 @@
   "devDependencies": {},
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "proxy": {
-    "/backend/*": {
-      "target": "http://backend:30001",
-      "secure": false
-    }
+  "license": "ISC"
   }
-}

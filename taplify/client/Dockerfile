@@ -4,11 +4,9 @@ WORKDIR /client
 
 COPY package*.json /client/
 
-ADD yarn.lock /tmp/
+ADD yarn.lock /client/
 
-RUN npm install
-
-RUN yarn install
+RUN yarn
 
 COPY . /client/
 

@@ -4,11 +4,9 @@ WORKDIR /backend
 
 COPY package*.json /backend/
 
-#COPY yarn*.lock /backend/
+ADD yarn.lock /backend/
 
 RUN yarn install
-
-RUN npm install
 
 COPY . /backend/
 
